@@ -1,0 +1,1148 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"add",
+				"addItemsToCart"
+			],
+			[
+				"my",
+				"mycart"
+			],
+			[
+				"it",
+				"itemQuantityAdder"
+			],
+			[
+				"int",
+				"intYouNeed"
+			],
+			[
+				"inte",
+				"integerCheck"
+			],
+			[
+				"exit",
+				"exit2"
+			],
+			[
+				"exi",
+				"exit2"
+			],
+			[
+				"is",
+				"isNumber"
+			],
+			[
+				"cart",
+				"cartSel"
+			],
+			[
+				"ca",
+				"cartSel"
+			],
+			[
+				"tru",
+				"trueOrfalse"
+			],
+			[
+				"ks",
+				"kdstoreS"
+			],
+			[
+				"kdstr",
+				"kdstore"
+			],
+			[
+				"kds",
+				"kdstore"
+			],
+			[
+				"isn",
+				"isNumber"
+			],
+			[
+				"q",
+				"quantity"
+			],
+			[
+				"quan",
+				"quantity"
+			],
+			[
+				"qu",
+				"quantityS"
+			],
+			[
+				"cartc",
+				"CartC"
+			],
+			[
+				"Car",
+				"CartS"
+			],
+			[
+				"car",
+				"CartC"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"cho",
+				"Choice"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"cha",
+				"Character"
+			],
+			[
+				"char",
+				"charAt"
+			],
+			[
+				"Cart",
+				"CartS"
+			],
+			[
+				"draw",
+				"drawLine"
+			],
+			[
+				"priec",
+				"PriceNum"
+			],
+			[
+				"na",
+				"nameS"
+			],
+			[
+				"price",
+				"PriceNum"
+			],
+			[
+				"st",
+				"String"
+			],
+			[
+				"prin",
+				"printCentered"
+			],
+			[
+				"el",
+				"elif\telse if"
+			],
+			[
+				"choo",
+				"chooseS"
+			],
+			[
+				"Cha",
+				"char"
+			],
+			[
+				"C",
+				"Choice"
+			],
+			[
+				"next",
+				"nextInt"
+			],
+			[
+				"name",
+				"Name"
+			],
+			[
+				"ra",
+				"randomnum"
+			],
+			[
+				"choose",
+				"chooseNum"
+			],
+			[
+				"inter",
+				"Integer"
+			],
+			[
+				"cartNum",
+				"cartNumber"
+			],
+			[
+				"deleteN",
+				"deleteNum"
+			],
+			[
+				"Inter",
+				"Integer"
+			],
+			[
+				"line1",
+				"line1"
+			],
+			[
+				"phone",
+				"phoneLine"
+			],
+			[
+				"nex",
+				"NextLineCenterer"
+			],
+			[
+				"ms",
+				"msg"
+			],
+			[
+				"Line",
+				"NextLineCenterer"
+			],
+			[
+				"msg",
+				"msgLenght"
+			],
+			[
+				"j",
+				"j.i\tjava.io."
+			],
+			[
+				"pri",
+				"price"
+			],
+			[
+				"mycar",
+				"Mycart"
+			],
+			[
+				"delea",
+				"deleatNum"
+			],
+			[
+				"d",
+				"deleatMenu"
+			],
+			[
+				"pl",
+				"pl\tprintln"
+			],
+			[
+				"prnt",
+				"printCart"
+			],
+			[
+				"myca",
+				"Mycart"
+			],
+			[
+				"sta",
+				"start"
+			],
+			[
+				"del",
+				"deleatMenu"
+			],
+			[
+				"timer",
+				"drawTimer"
+			],
+			[
+				"stri",
+				"String"
+			],
+			[
+				"line",
+				"line8b"
+			],
+			[
+				"stop",
+				"stop2"
+			],
+			[
+				"che",
+				"checkOut"
+			],
+			[
+				"day",
+				"dayRandomiser"
+			],
+			[
+				"number",
+				"numberOfItems"
+			],
+			[
+				"y",
+				"YOrN"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"stin",
+				"String"
+			],
+			[
+				"print",
+				"printCart"
+			],
+			[
+				"final",
+				"finalPrice"
+			],
+			[
+				"buy",
+				"buyOrNot"
+			],
+			[
+				"ad",
+				"addHuaToArray"
+			],
+			[
+				"n",
+				"nextInt"
+			],
+			[
+				"pr",
+				"printSam"
+			],
+			[
+				"a",
+				"ArrayList"
+			],
+			[
+				"ph",
+				"Phone"
+			],
+			[
+				"arra",
+				"ArrayList"
+			],
+			[
+				"St",
+				"String"
+			],
+			[
+				"get",
+				"getPhonesByBrand"
+			],
+			[
+				"cla",
+				"classes"
+			],
+			[
+				"clas",
+				"Classes"
+			],
+			[
+				"project",
+				"ProjectK"
+			],
+			[
+				"bra",
+				"brandS"
+			],
+			[
+				"ma",
+				"MyCart"
+			],
+			[
+				"Ca",
+				"MyCart"
+			],
+			[
+				"h",
+				"huawei"
+			],
+			[
+				"Ram",
+				"RAM"
+			],
+			[
+				"r",
+				"Ram"
+			],
+			[
+				"nam",
+				"Name"
+			],
+			[
+				"logo",
+				"Logo"
+			],
+			[
+				"c",
+				"clear"
+			],
+			[
+				"lo",
+				"Logo"
+			],
+			[
+				"l",
+				"Logo"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"ap",
+				"Apple"
+			],
+			[
+				"dra",
+				"DrawLine"
+			],
+			[
+				"dr",
+				"DrawLine"
+			],
+			[
+				"m",
+				"m\tmethod"
+			],
+			[
+				"s",
+				"S"
+			],
+			[
+				"i",
+				"im\timport"
+			],
+			[
+				"p",
+				"p\tprint"
+			],
+			[
+				"stp",
+				"stp1"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"scr",
+				"screen"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"t",
+				"tumblr"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"articl",
+				"articleUrl"
+			],
+			[
+				"arti",
+				"article"
+			],
+			[
+				"blog",
+				"blog-article-1"
+			],
+			[
+				"link",
+				"linkText"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"ho",
+				"hover"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"padd",
+				"padding-right"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ProjectK.java",
+			"settings":
+			{
+				"buffer_size": 18359,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "BUGS\n\nyORn QUESTIONS CAN TAKE BOTH 'Y' AND 'y' OR 'N' AND 'n' (done)\n\nHAVE TO SOLVE indexOutOfBounds IN DELETE MENU (done)\n\nInputMismatchError (done)\n\tlocations:\n\n\t\tHOME (done)\n\t\tQUANTITY OF ITEMS (done)\n\t\tCART (done)\n\nTHE BOX BUILDER NOT WORKS PROPERLY AFTER DELETING ITEM FROM CART\nFINAL AMOUNT NOT CHANGING AFTER DELETING A PRODUCT (DONE)\n\nIMPROVEMENTS\n\n\tWILL ALLOW THE USER TO EMPTY THE CART AT ONCE (done)\n\t\n\tTO MANY PHONES IN THE CART AT THE TIME OF CHECKOUT GETS TOO LONG FOR THE TERMINAL TO DISPLAY \n\tSO REDUCE THE NUMBER OF PHONES BEING DISPLAYED!! (done)\n\t\n\tALLOW USER TO CANCEL THE PLACEMENT OF THE ORDER AFTER APPROVING TO BUY A PHONE BOTH IN THE PHONE SELCTION PHASE AND THE QUANTITY SELECTION PHASE (done)\n\t\n\tADD MORE DETAILS ABOUT THE PHONE I.E. STORAGE\n\n\tOPTIMISE CODE BY MAKING FUNCTIONS OF REPETED ACTION\n\n\t\tY OR N CHECKER (done)\n\t\tIS A DIGIT OR NO\n\nCONCEPTS USED \n\t\n\tSTRING MANUPULATION\n\tARRAYS \n\tARRYLISTS \n\tMULTIPLE CLASSES \n\tOBJECT ORIENTED PROGRAMING \n\tLIBRARIES \n\tINPUT \n\tCONDITIONS \n\tITERATIONS \n\tDATA-TYPE FUNCTIONS \n\tMATH FUNCTIONS\n\tJAVA ESCAPES\n\nTOTAL CODE LESS THAN 1000 LINES ",
+			"file": "REPORT.txt",
+			"file_size": 1138,
+			"file_write_time": 131767242626152270,
+			"settings":
+			{
+				"buffer_size": 1106,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "PhoneList.java",
+			"settings":
+			{
+				"buffer_size": 3473,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Phone.java",
+			"settings":
+			{
+				"buffer_size": 276,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Logo.java",
+			"settings":
+			{
+				"buffer_size": 23410,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test.java",
+			"settings":
+			{
+				"buffer_size": 95,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Java/JavaC.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Install Package Control"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/C.A. Project X"
+	],
+	"file_history":
+	[
+		"/C/Users/ManiarTech-01/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/C.A. Project X/ProjectK.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/PhoneList.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Logo.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Screen.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Phone.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/test.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/[dir",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Cart.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Nokia.java",
+		"/C/Users/ManiarTech-01/Documents/SkidRow/343560/remote.dat",
+		"/C/Users/ManiarTech-01/Documents/SkidRow/343560/achieve.dat",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Xiomi.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Huawei.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Apple.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Samsung.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/ProjectKRennder.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/ProjectK.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Series2.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Series1.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/PatternSH.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Code3.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Java/Code2.java",
+		"/C/Users/ManiarTech-01/Documents/Kabir/Websites/main.html",
+		"/C/Users/ManiarTech-01/Documents/Kabir/kabironline/assets/css/style.css",
+		"/C/Users/ManiarTech-01/Documents/Kabir/kabironline/index.html",
+		"/D/CRACK MATERIAL 1/HOW TO CRACK.doc",
+		"/C/Users/ManiarTech-01/Documents/Kabir/kabironline/Coding.docx",
+		"/C/Users/ManiarTech-01/Documents/Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+		"/Users/kabir/Projects/kabironline-v2/theme/HTML/assets/css/custom.css",
+		"/Users/kabir/Projects/kabironline-v2/theme/HTML/assets/css/styles.css",
+		"/Users/kabir/Projects/kabironline-v2/theme/HTML/contact.php",
+		"/Users/kabir/Projects/kabironline-v2/theme/HTML/index.html",
+		"/Users/kabir/Projects/kabironline-v2/assets/index copy.html",
+		"/Users/kabir/Projects/KabirOnline/html/index.html",
+		"/Users/kabir/Projects/KabirOnline/assets/css/style.css",
+		"/Users/kabir/Projects/KabirOnline/html/references.html",
+		"/Users/kabir/Projects/KabirOnline/html/school-page.html",
+		"/Users/kabir/Projects/KabirOnline/assets/js/main.js",
+		"/Users/kabir/Projects/KabirOnline/assets/css/contact-us.css",
+		"/Users/kabir/Projects/KabirOnline/html/contact-us.html",
+		"/Users/kabir/Projects/KabirOnline/assets/css/reference.css",
+		"/Users/kabir/Projects/KabirOnline/assets/css/school-page.css",
+		"/Users/kabir/Projects/KabirOnline/kabironline.sublime-project",
+		"/Users/kabir/Projects/KabirOnline/assets/bootstraptest/bootstrapTest/test1.css",
+		"/Users/kabir/Projects/KabirOnline/test1.html",
+		"/Users/kabir/Projects/KabirOnline/assets/bootstraptest/test1.html",
+		"/Users/kabir/Projects/KabirOnline/assets/bootstrap test/test1.html",
+		"/Users/kabir/Projects/KabirOnline/assets/bootstrap test/test1.bootstrap",
+		"/Users/kabir/Projects/KabirOnline/references.html",
+		"/Users/kabir/Projects/KabirOnline/school-page.html",
+		"/Users/kabir/Projects/KabirOnline/index.html",
+		"/Users/kabir/Projects/KabirOnline/assets/contact-us.css",
+		"/Users/kabir/Projects/KabirOnline/assets/contact-us.html",
+		"/Users/kabir/Projects/KabirOnline/assets/css/refencers.css",
+		"/Users/kabir/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 151.0,
+		"where_history":
+		[
+			"/Users/kabir/Projects/kabironline-v2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"isNumber",
+			"trueOrfalse",
+			"tOrF",
+			"║",
+			"╗",
+			"cartChoose.equalsIgnoreCase(\"y\") || cartChoose.equalsIgnoreCase(\"n\")",
+			"printCenter",
+			"NextLinePrintCenter",
+			";;",
+			"System.out.print",
+			"System.out.println",
+			"NextLinePrintCenter",
+			";;",
+			"finalPrice",
+			"Do you want to add phone to your cart from this list ",
+			"Do you want to add phone to your cart from this list (y/n):",
+			"do you want to",
+			"equals",
+			"list",
+			"size",
+			"deleat",
+			"equal",
+			"menu",
+			"menuInt",
+			"nextInt",
+			"deleat",
+			"menu",
+			"exit2",
+			"System.out.println",
+			"System.out.print",
+			"System.out.println",
+			"System.out.print",
+			"System.out.println",
+			"printamtbox(2)",
+			"printamtbox(1)",
+			"printamtbox()",
+			"printCart",
+			"stop()",
+			"boxwidth",
+			"stop(5);",
+			"stop();",
+			"stop2();",
+			"stop();",
+			"stop2();",
+			"'",
+			"345",
+			"}\n",
+			"press",
+			"MyCaer",
+			"list",
+			"\" Nokia",
+			"Phone (\" ",
+			"new Phone (",
+			"new PhoneList",
+			"PhoneList",
+			"phone",
+			"Phone",
+			"phone",
+			"Phone",
+			"phone",
+			"Phone",
+			"phone",
+			"Phone",
+			"phone",
+			"Phone",
+			"phone",
+			"PhoneList",
+			"Apple",
+			"Nokia",
+			"Apple",
+			"Samsung",
+			"Phones",
+			"subBrands",
+			"\n|\\",
+			"                                                    ",
+			"                                                          ",
+			"                                                         ",
+			"                                                        ",
+			"                                                       ",
+			"                                                      ",
+			"}",
+			"div",
+			"www.kabironline.com",
+			"3",
+			"6",
+			"133996986914",
+			"description",
+			"255",
+			"222",
+			"navbar-brand scrollto",
+			"ying yang",
+			"page-content",
+			".highlight",
+			"page-title",
+			"id",
+			">\n",
+			"#header"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"yesNo",
+			"isYes",
+			"     ",
+			" ",
+			"cartChoose.equalsIgnoreCase(\"y\") || cartChoose.equalsIgnoreCase(\"n\") || cartChoose.equalsIgnoreCase(\"yes\") || cartChoose.equalsIgnoreCase(\"no\")",
+			"printCentered",
+			"System.out.println",
+			";",
+			"PrintCenter",
+			"NextLinePrintCenter",
+			"equalsIgnoreCase",
+			"delete",
+			"equals",
+			"delete",
+			"Screen.NextLineCenterer",
+			"Screen.LineCenterer",
+			"Screen.NextLineCenterer",
+			"printAmtBox()",
+			"printamtbox(1)",
+			"cart",
+			"stop(1);",
+			"stop(5);",
+			"stop(1);",
+			"\"",
+			"Enter",
+			"MyCart",
+			"MyCaer",
+			"PhoneList",
+			"Huawei",
+			"Nokia",
+			"Apple",
+			"phone",
+			"Phones",
+			"",
+			"navbar-brand-scrollto"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ProjectK.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4115,
+								4115
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2354.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "REPORT.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								905,
+								905
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 331.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "PhoneList.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								902,
+								902
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 385.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Phone.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Logo.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23410,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14372,
+								14372
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1548.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "test.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 53.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 78.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "School_Java.sublime-project",
+	"replace":
+	{
+		"height": 73.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
