@@ -205,6 +205,7 @@ class ProjectK {
 
     public static void itemQuantityAdder (Cart item) {
         boolean exit = false;
+        boolean exit2 = false;
         PhoneList list = new PhoneList();
         String Name = item.name;
         while (!exit) {
@@ -213,11 +214,17 @@ class ProjectK {
                 if (intYouNeed == 999) {
                     home();   
                 }else{
-                    for (int i = 1; i <= intYouNeed  ;i++ ) {
-                        Mycart.add(item);
+                    while(!exit2) {
+                        if (intYouNeed > 0 && intYouNeed <=10) {
+                            for (int i = 1; i <= intYouNeed  ;i++ ) {
+                                Mycart.add(item);
+                            }
+                            home();
+                        }else{
+                            System.out.println("Wrong Choice!!");
+                            integerCheck("You have selected : " + Name + "\nPlease enter quantity or enter 999 to exit");
+                        }
                     }
-                    exit = true;
-                    home();
                 }
             }else {
                 System.out.println("Wrong Choice!!");
@@ -226,7 +233,7 @@ class ProjectK {
     }
 
     public static void stop(int timer) {
-        long i = 0;
+        int i = 0;
         while (i <= 100000000 * timer) {
             i++;
         }
@@ -444,8 +451,13 @@ class ProjectK {
     }
 
     public static void checkOut () {
+        Scanner sc = new Scanner(System.in); 
         int numberOfItems = Mycart.size();
         int dayRandomiser = (int)(Math.random() * 10);
+        String name = "";
+        String address = "";
+        int phoneNumber = 0;
+
         if (numberOfItems > 0) {
             clear();
             if (dayRandomiser < 3) {
