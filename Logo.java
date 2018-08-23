@@ -99,45 +99,52 @@ class Logo {
 		String kdstoreSS = "                                            \u2588\u2588\u2557  \u2588\u2588\u2557       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\r\n                                            \u2588\u2588\u2551 \u2588\u2588\u2554\u255D       \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255D\u255A\u2550\u2550\u2588\u2588\u2554\u2550\u2550\u255D\u2588\u2588\u2554\u2550\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255D\r\n                                            \u2588\u2588\u2588\u2588\u2588\u2554\u255D        \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557   \u2588\u2588\u2551   \u2588\u2588\u2551   \u2588\u2588\u2551\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D\u2588\u2588\u2588\u2588\u2588\u2557  \r\n                                            \u2588\u2588\u2554\u2550\u2588\u2588\u2557        \u255A\u2550\u2550\u2550\u2550\u2588\u2588\u2551   \u2588\u2588\u2551   \u2588\u2588\u2551   \u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u255D  \r\n                                            \u2588\u2588\u2551  \u2588\u2588\u2557\u2588\u2588\u2557    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551   \u2588\u2588\u2551   \u255A\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255D\u2588\u2588\u2551  \u2588\u2588\u2551\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\r\n                                            \u255A\u2550\u255D  \u255A\u2550\u255D\u255A\u2550\u255D    \u255A\u2550\u2550\u2550\u2550\u2550\u2550\u255D   \u255A\u2550\u255D    \u255A\u2550\u2550\u2550\u2550\u2550\u255D \u255A\u2550\u255D  \u255A\u2550\u255D\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u255D";
 		String line7 = "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550";
 		int logoTimer = 3;
+		String[] LogoSequence = {k,kd,kds,kdst,kdstor,kdstore,kdstoreS,kdstoreSS};
+		for(int i = 0;i<8 ; i++){
 		drawLine();
+		System.out.println(LogoSequence[i]);
 		stop(logoTimer);
 		clear();
-		drawLine();
-		System.out.println(k);
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kd);
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kds);
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kdst);  
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kdsto);
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kdstor);
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kdstore);
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kdstoreS);
-		stop(logoTimer);
-		clear();
-		drawLine();
-		System.out.println(kdstoreSS);
-		stop(logoTimer);
-		drawLine();
+		}
+		// drawLine();
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(k);
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kd);
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kds);
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kdst);  
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kdsto);
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kdstor);
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kdstore);
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kdstoreS);
+		// stop(logoTimer);
+		// clear();
+		// drawLine();
+		// System.out.println(kdstoreSS);
+		// stop(logoTimer);
+		// drawLine();
 	}
 	public static void stop(int timer) {
 		long i = 0;
@@ -154,7 +161,6 @@ class Logo {
 	}
 	public static void clear(){
 	//Clears Screen in java
-	Logo log = new Logo();
 	try {
 		if (System.getProperty("os.name").contains("Windows"))
 			new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();

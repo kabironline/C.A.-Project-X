@@ -16,13 +16,57 @@ class ProjectK {
     public static boolean choose = false;
     public static boolean isYes = false;
     public static ArrayList<Cart> Mycart = new ArrayList<Cart>();
-    public static Cart cartItem = new Cart("",0,0.0)
-    ;    //The Main Function
+    public static Cart cartItem = new Cart("",0,0.0);
+
+        //The Main Function
     public static void main(String[] args) {
+        login();
+    }
+
+    public static void login (){
+        Scanner sc = new Scanner (System.in);
+        boolean exit = false;
+        boolean exit2 = false;
+        String val;
+        while(!exit){
+        Logo.clear();
+            System.out.println("username : admin");
+            System.out.println("password : admin");
+            Logo.vAlign ();
+            printCentered2("username : ");
+            val = sc.next();
+            if (val.equals("admin")) {
+                exit = true;
+            }
+            else {
+                printCentered("Wrong username!");
+                printCentered("Please try again...");
+                stop(3);
+            }
+
+        }
+        while(!exit2){
+        Logo.clear();
+            System.out.println("username : admin");
+            System.out.println("password : admin");
+            Logo.vAlign ();
+            printCentered2("password : ");
+            val = sc.next();
+            if (val.equals("admin")) {
+                exit2 = true;
+            }
+            else {
+                printCentered("Wrong password!");
+                printCentered("Please try again...");
+                stop(3);
+            }
+
+        }
+
         Logo.drawWelcome();
         home();
-
     }
+
 
     private static void discription () {
         // clear();
@@ -50,7 +94,10 @@ class ProjectK {
         int n = ((screenWidth - text.length()) / 2) + text.length();
         System.out.println(String.format("%1$" + n + "s", text));
     }
-
+    public static void printCentered2(String text) {
+        int n = ((screenWidth - text.length()) / 2) + text.length();
+        System.out.print(String.format("%1$" + n + "s", text));
+    }
     public static void home () {
         clear();
         discription();
@@ -246,7 +293,7 @@ class ProjectK {
         int choose = 0;
         Scanner sc = new Scanner (System.in);
         if (Mycart.size() == 0) {
-            System.out.println("There is nothing in your cart");
+            System.out.println("There is nothing in your cart!?!?");
 
         }else {
             System.out.println(Mycart.size() + " item(s) are in your cart.");
@@ -419,33 +466,19 @@ class ProjectK {
         boolean exit = false;
         boolean exit2 = false;
         boolean exit3 = false;
-
-        while (!exit3) {
-            System.out.println("Enter the number allocated to the phone you want to delete: ");
-            deleteNum = sc.nextInt();
+        integerCheck("Enter the number allocated to the phone you want to delete");
+        if (isNumber) {
+            while(!exit)
             if (deleteNum >= 0 && deleteNum < Mycart.size()) {
-                while(!exit){
-                    System.out.print("Are You sure you want to delete "+Mycart.get(deleteNum).name+" from the cart: (y/n): ");
-                    while (!exit2) {
-                        cartChoose = sc.next();
-                        if (cartChoose.equalsIgnoreCase("y") || cartChoose.equalsIgnoreCase("n")) {
-                            if (cartChoose.equalsIgnoreCase("y")) {
-                                // finalPrice -= Mycart.get(deleteNum).price;
-                                Mycart.remove(deleteNum);
-                                cart();
-                            }else if (cartChoose.equalsIgnoreCase("n")){
-                                cart();
-                            }
-                            exit2 = true;
-                        }else{
-                            System.out.println("Wrong Choice!!");
-                            System.out.print("Are You sure you want to delete "+Mycart.get(deleteNum).name+" from the cart: (y/n): ");
-                        }
-                    }
-                    exit = true;
+                yesNo("Are You sure you want to delete "+Mycart.get(deleteNum).name+" from the cart");
+                if (isYes) {
+                    Mycart.remove(deleteNum);
+                }else {
+                    cart();
                 }
-            }else{
-                System.out.println("!Wrong Choice!");
+                exit = true;
+            }else {
+                System.out.println("Wrong Choice!!");
             }
         }
     }
@@ -483,74 +516,32 @@ class ProjectK {
         }
         stop(9);
         stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
-        stop(9);
+
 
         exit();
 
     }
 
     public static void exitCheck () {
-        Scanner sc = new Scanner (System.in);
-        String cartChoose = "";
-        boolean exit = false;
-        boolean exit2 = false;
-        System.out.print("are you sure you want to exit the store? (y/n): ");
-        while (!exit) {
-            cartChoose = sc.next();
-            if (cartChoose.equalsIgnoreCase("y") || cartChoose.equalsIgnoreCase("n")) {
-                if (cartChoose.equalsIgnoreCase("y")) {
-                    if (Mycart.size() != 0) {
-                        System.out.print("You have items in your cart. Do you wish to buy them (y/n): ");
-                        while (!exit2) {
-                            cartChoose = sc.next();
-                            if (cartChoose.equalsIgnoreCase("y") || cartChoose.equalsIgnoreCase("n")) {
-                                if (cartChoose.equalsIgnoreCase("y")) {
-                                    cart();
-                                }else if (cartChoose.equalsIgnoreCase("n")){
-                                    exit();
-                                }
-                                exit2 = true;
-                            }else{
-                                System.out.println("Wrong Choice!!");
-                                System.out.print("You have items in your cart. Do you wish to buy them (y/n): ");
-                            }
-
-                        }
-                    }else{
-                        exit();
-                    }
-                }else if (cartChoose.equalsIgnoreCase("n")){
-                    home();
+        yesNo("Are you sure you want to exit the store?");
+        if (isYes) {
+            if(Mycart.size() != 0){
+                yesNo("You have items in your cart? Do You wish to buy them?");
+                if (isYes) {
+                    cart();
+                }else{
+                    exit();
                 }
-                exit = true;
-            }else{
-                System.out.println("Wrong Choice!!");
-                System.out.print("Are you sure you want to exit the store (y/n): ");
+            }else {
+                exit();
             }
-
+        }else{
+            start();
         }
-
     }
 
     public static void exit (){
-        try{
-
-            new ProcessBuilder("color C").inheritIO().start().waitFor();
-
-        } catch (IOException | InterruptedException ex) {}
+        Mycart.clear();
         Logo log = new Logo();
         log.exitAnim();
     }
