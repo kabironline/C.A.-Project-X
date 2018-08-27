@@ -51,24 +51,11 @@ class Logo {
 		String line9 = "				                         \u2580                                                             ";
 		clear();
 		vAlign();
-		System.out.println(line1);
-		stop(5);
-		System.out.println(line2);
-		stop(5);
-		System.out.println(line3);
-		stop(5);
-		System.out.println(line4);
-		stop(5);
-		System.out.println(line5);
-		stop(5);
-		System.out.println(line6);
-		stop(5);
-		System.out.println(line7);
-		stop(5);
-		System.out.println(line8);
-		stop(5);
-		System.out.println(line9);
-		stop(5);
+		String[] welcomeSequence = {line1,line2,line3,line4,line5,line6,line7,line8,line9};
+		for (int j = 0;j< 9 ;j++ ) {
+			System.out.println(welcomeSequence[j]);
+			stop(5);
+		}
 		stop(9);
 		stop(9);
 		stop(9);

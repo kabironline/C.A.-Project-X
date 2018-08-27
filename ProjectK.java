@@ -349,7 +349,7 @@ class ProjectK {
                 }else if (choose == 2){
                     clearCart();
                 }else if (choose == 3) {
-                    checkOut();
+                    addressCheck();
                 }else if (choose == 4) {
 
                     start();
@@ -512,7 +512,6 @@ class ProjectK {
         
         clear();
         if (numberOfItems > 0) {
-            addressCheck();
             clear();
             System.out.println("Your items will arrive at : "+  address);
             if (dayRandomiser < 3) {
@@ -539,15 +538,19 @@ class ProjectK {
         }
         yesNo("Please confirm the items you have added to your cart");
         if(isYes){
-
+            exit();
         }
 
     }
     public static void addressCheck(){
         Logo.clear();
-        yesNo("The order is placed by : " + name + " " + surname + "\nThe order will arrive at " + address + "\nThe Phone Number of the recipient is : " + phoneNumber + "\nAre the above given details correct ");
+        Logo.vAlign();
+        printCentered2("The order is placed by : " + name + " " + surname + "\nThe order will arrive at " + address + "\nThe Phone Number of the recipient is : " + phoneNumber + "\nAre the above given details correct ");
+        yesNo("");
         if(!isYes){
             takeCredentials();
+        }else{
+            checkOut();
         }
 
 
@@ -571,8 +574,6 @@ class ProjectK {
     }
 
     public static void exit (){
-        Mycart.clear();
-        Logo log = new Logo();
-        log.exitAnim();
+        Logo.exitAnim();
     }
 }
