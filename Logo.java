@@ -86,8 +86,7 @@ class Logo {
 		}
 		System.out.println("");
 	}
-
-	public static  void logoDraw () {
+	public static void logoDraw () {
 		String k = "\u2588\u2588   \u2588\u2588\r\n\u2588\u2588  \u2588\u2588\r\n\u2588\u2588\u2588\u2588\u2588 \r\n\u2588\u2588  \u2588\u2588 \r\n\u2588\u2588   \u2588\u2588\r\n";
 		String kd = "\u2588\u2588   \u2588\u2588   \r\n\u2588\u2588  \u2588\u2588   \r\n\u2588\u2588\u2588\u2588\u2588    \r\n\u2588\u2588  \u2588\u2588     \r\n\u2588\u2588   \u2588\u2588 \u2588\u2588\r\n\r\n           ";
 		String kds = "\u2588\u2588   \u2588\u2588        \u2588\u2588\u2588\u2588\u2588\u2588\u2588 \r\n\u2588\u2588  \u2588\u2588         \u2588\u2588 \r\n\u2588\u2588\u2588\u2588\u2588          \u2588\u2588\u2588\u2588\u2588\u2588\u2588\r\n\u2588\u2588  \u2588\u2588              \u2588\u2588\r\n\u2588\u2588   \u2588\u2588 \u2588\u2588     \u2588\u2588\u2588\u2588\u2588\u2588\u2588 ";
@@ -101,50 +100,12 @@ class Logo {
 		int logoTimer = 3;
 		String[] LogoSequence = {k,kd,kds,kdst,kdstor,kdstore,kdstoreS,kdstoreSS};
 		for(int i = 0;i<8 ; i++){
+		clear();
 		drawLine();
 		System.out.println(LogoSequence[i]);
 		stop(logoTimer);
-		clear();
 		}
-		// drawLine();
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(k);
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kd);
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kds);
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kdst);  
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kdsto);
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kdstor);
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kdstore);
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kdstoreS);
-		// stop(logoTimer);
-		// clear();
-		// drawLine();
-		// System.out.println(kdstoreSS);
-		// stop(logoTimer);
-		// drawLine();
+		drawLine();
 	}
 	public static void stop(int timer) {
 		long i = 0;

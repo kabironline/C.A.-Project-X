@@ -15,62 +15,82 @@ class ProjectK {
     public static boolean isNumber = false;
     public static boolean choose = false;
     public static boolean isYes = false;
+    public static String name;
+    public static String surname = "";
+    public static String address;
+    public static String phoneNumber;
     public static ArrayList<Cart> Mycart = new ArrayList<Cart>();
     public static Cart cartItem = new Cart("",0,0.0);
 
         //The Main Function
     public static void main(String[] args) {
+        Logo.drawWelcome();
         login();
     }
 
     public static void login (){
+        takeCredentials();
+         start();
+    }
+    public static void takeCredentials (){
+        
         Scanner sc = new Scanner (System.in);
         boolean exit = false;
         boolean exit2 = false;
-        String val;
-        while(!exit){
-        Logo.clear();
-            System.out.println("username : admin");
-            System.out.println("password : admin");
-            Logo.vAlign ();
-            printCentered2("username : ");
-            val = sc.next();
-            if (val.equals("admin")) {
-                exit = true;
-            }
-            else {
-                printCentered("Wrong username!");
-                printCentered("Please try again...");
-                stop(3);
-            }
+        while (!exit2) {
+            Logo.clear();
+            Logo.vAlign();
+            printCentered("Weclome Guest User");
+            printCentered2("Enter your first name : ");
+            name = sc.next();
 
-        }
-        while(!exit2){
-        Logo.clear();
-            System.out.println("username : admin");
-            System.out.println("password : admin");
-            Logo.vAlign ();
-            printCentered2("password : ");
-            val = sc.next();
-            if (val.equals("admin")) {
+            Logo.clear();
+            Logo.vAlign();
+            printCentered("Weclome " + name);
+            printCentered2("Enter your surname : ");
+            surname = sc.next();
+            char a;
+            sc.useDelimiter("\n");
+            Logo.clear();
+            Logo.vAlign();
+            printCentered("Weclome " + name + " " + surname);
+            printCentered2("Enter the address of delivery : ");
+            address = sc.next();
+            while(!exit){
+                Logo.clear();
+                Logo.vAlign();
+                System.out.println(phoneNumber);
+                printCentered("Last step of Registration");
+                printCentered2("Enter only the phone number : ");
+                phoneNumber = sc.next();
+                if (phoneNumber.length() == 10 || phoneNumber.length() == 10)  {
+                    
+                    for (int i = 0; i<phoneNumber.length() ;i++ ) {
+                        a = phoneNumber.charAt(i);
+                        if (Character.isDigit(a) == false) {
+                            exit = false;
+                        }else {
+                            exit = true;
+                        }
+                    }
+                }
+            }
+            Logo.clear();
+            Logo.vAlign();
+            printCentered("Name : " + name + " " + surname);
+            printCentered("Address : " + address);
+            printCentered("PhoneNumber : " + phoneNumber);
+            yesNo("Are the above given details correct");
+            if (isYes) {
                 exit2 = true;
             }
-            else {
-                printCentered("Wrong password!");
-                printCentered("Please try again...");
-                stop(3);
-            }
-
         }
-
-        Logo.drawWelcome();
-        home();
+        
     }
 
-
     private static void discription () {
-        // clear();
-        printCentered("Welcome to the K. Store");
+        clear();
+        printCentered("Welcome " + name+" to the K. Store");
         stop(1);
         printCentered("");
         printCentered("Instructions");
@@ -99,7 +119,6 @@ class ProjectK {
         System.out.print(String.format("%1$" + n + "s", text));
     }
     public static void home () {
-        clear();
         discription();
         menu();
     }
@@ -490,9 +509,12 @@ class ProjectK {
         String name = "";
         String address = "";
         int phoneNumber = 0;
-
+        
+        clear();
         if (numberOfItems > 0) {
+            addressCheck();
             clear();
+            System.out.println("Your items will arrive at : "+  address);
             if (dayRandomiser < 3) {
                 System.out.println("                        Your items will arrive in 1-3 buisness days");
             }else if (dayRandomiser > 2 && dayRandomiser < 7) {
@@ -510,18 +532,26 @@ class ProjectK {
             }
             boxWidth +=1;
             printAmtBox();
+
         }else {
             System.out.println("                            You have nothing in your cart!");
 
         }
-        stop(9);
-        stop(9);
+        yesNo("Please confirm the items you have added to your cart");
+        if(isYes){
 
-
-        exit();
+        }
 
     }
+    public static void addressCheck(){
+        Logo.clear();
+        yesNo("The order is placed by : " + name + " " + surname + "\nThe order will arrive at " + address + "\nThe Phone Number of the recipient is : " + phoneNumber + "\nAre the above given details correct ");
+        if(!isYes){
+            takeCredentials();
+        }
 
+
+    }
     public static void exitCheck () {
         yesNo("Are you sure you want to exit the store?");
         if (isYes) {

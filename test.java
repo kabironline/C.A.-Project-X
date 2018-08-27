@@ -1,7 +1,7 @@
 import java.io.*;
 class test{
 	public static void main(String[] args) {
-	ProjectK.home();
+	ProjectK.login();
 
 	}
 }
