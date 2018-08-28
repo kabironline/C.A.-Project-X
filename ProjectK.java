@@ -33,7 +33,8 @@ class ProjectK {
          start();
     }
     public static void takeCredentials (){
-        
+        BufferedReader sc2;
+        sc2 = new BufferedReader(new InputStreamReader(System.in));
         Scanner sc = new Scanner (System.in);
         boolean exit = false;
         boolean exit2 = false;
@@ -42,27 +43,38 @@ class ProjectK {
             Logo.vAlign();
             printCentered("Weclome Guest User");
             printCentered2("Enter your first name : ");
-            name = sc.next();
+            try{
+                name = sc2.readLine();
+            }
+            catch(IOException e ){}
 
             Logo.clear();
             Logo.vAlign();
             printCentered("Weclome " + name);
             printCentered2("Enter your surname : ");
-            surname = sc.next();
+            try{
+                surname = sc2.readLine();
+            }
+            catch(IOException e ){}
             char a;
             sc.useDelimiter("\n");
             Logo.clear();
             Logo.vAlign();
             printCentered("Weclome " + name + " " + surname);
             printCentered2("Enter the address of delivery : ");
-            address = sc.next();
+            try{
+                address = sc2.readLine();
+            }
+            catch(IOException e ){}
             while(!exit){
                 Logo.clear();
                 Logo.vAlign();
-                System.out.println(phoneNumber);
                 printCentered("Last step of Registration");
                 printCentered2("Enter only the phone number : ");
-                phoneNumber = sc.next();
+                try{
+                phoneNumber = sc2.readLine();
+                }
+                catch(IOException e2){}
                 if (phoneNumber.length() == 10 || phoneNumber.length() == 10)  {
                     
                     for (int i = 0; i<phoneNumber.length() ;i++ ) {
@@ -85,7 +97,7 @@ class ProjectK {
                 exit2 = true;
             }
         }
-        
+        start();
     }
 
     private static void discription () {
@@ -125,11 +137,16 @@ class ProjectK {
 
     public static boolean yesNo (String text) {
         boolean exit = false;
-        Scanner sc = new Scanner (System.in);
+        //Scanner sc = new Scanner (System.in);
         String choose = "";
+        BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
+
         while (!exit) {
             System.out.print(text + " (y/n):");
-            choose = sc.next();
+            try{
+                choose = sc.readLine();
+            }
+            catch(IOException e) {}
             if (choose.equalsIgnoreCase("y") || choose.equalsIgnoreCase("n")) {
                 if (choose.equalsIgnoreCase("y")) {
                     isYes = true;
@@ -147,12 +164,16 @@ class ProjectK {
     }
 
     public static int integerCheck (String text) {
-        Scanner sc = new Scanner (System.in);
+        BufferedReader sc =new BufferedReader (new InputStreamReader(System.in));
+        String numS = "";
         char c;
         boolean exit = false;
         while (!exit){
             System.out.print(text + " :");
-            String numS = sc.next();
+            try{
+            numS = sc.readLine();
+            }
+            catch (IOException e){}
             for (int i = 0;i < numS.length() ;i++ ) {
                 char x = numS.charAt(i);
                 if (Character.isDigit(x) == false) {
@@ -206,7 +227,7 @@ class ProjectK {
         Scanner sc = new Scanner (System.in);
         boolean exit = false;
         while(!exit) {
-            //System.out.print("Please choose an option from the list given above : ");
+
             integerCheck("Please choose an option from the list given above");
             menu =  intYouNeed;
             if (isNumber) {
@@ -337,12 +358,10 @@ class ProjectK {
         System.out.println("Press 2 to clear your cart");
         System.out.println("Print 3 to check out your cart");
         System.out.println("Press 4 to return back to the menu");
-        System.out.print("please select your choice: ");
+        //System.out.print("please select your choice: ");
         while (!exit){
-            String chooseS = sc.next();
-            char c = chooseS.charAt(0);
-            boolean isNumber = Character.isDigit(c);
-            choose = Character.getNumericValue(c);
+            integerCheck("please select your choice: ");
+            choose =intYouNeed;
             if (choose== 1 || choose == 2 || choose == 3 || choose == 4) {
                 if (choose == 1) {
                     deleteMenu();
@@ -369,38 +388,30 @@ class ProjectK {
         Scanner sc = new Scanner(System.in);
 
         while (!exit) {
-            System.out.print("Are You sure you want to clear your cart?(y/n) ");
-            choose = sc.next();
-            if (Mycart.size() != 0 ) {
-                if (choose.equalsIgnoreCase("y") || choose.equalsIgnoreCase("n")) {
-                    if (choose.equalsIgnoreCase("y")) {
-                        Mycart.clear();
-                    }else if (choose.equalsIgnoreCase("n")){
-                    }
-                    exit = true;
-                }else{
-                    System.out.println("Wrong Choice!!");
-                }    
-            }else {
-                System.out.println("There is nothing in your cart :|");
+            //System.out.print("Are You sure you want to clear your cart?(y/n) ");
+            //choose = sc.next();
+            // if (Mycart.size() != 0 ) {
+            //     if (choose.equalsIgnoreCase("y") || choose.equalsIgnoreCase("n")) {
+            //         if (choose.equalsIgnoreCase("y")) {
+            //             Mycart.clear();
+            //         }else if (choose.equalsIgnoreCase("n")){
+            //         }
+            //         exit = true;
+            //     }else{
+            //         System.out.println("Wrong Choice!!");
+            //     }    
+            // }else {
+            //     System.out.println("There is nothing in your cart :|");
 
+            // }
+            yesNo("Are You sure you want to clear your cart? ");
+            if (isYes) {
+                if (Mycart.size() != 0 ){
+                    Mycart.clear();
+                }else {
+                    cart();
+                }
             }
-            clear();
-            System.out.println("Returning to Cart menu");
-            stop(9);
-            stop(9);
-            clear();
-            System.out.println("Returning to Cart menu.");
-            stop(9);
-            stop(9);
-            clear();
-            System.out.println("Returning to Cart menu..");
-            stop(9);
-            stop(9);
-            clear();
-            System.out.println("Returning to Cart menu...");
-            stop(9);
-            stop(9);
             cart();
 
         }
