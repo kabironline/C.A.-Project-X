@@ -8,7 +8,7 @@ class ProjectK {
     public static int screenWidth = 140;
     public static int finalPrice;
     public static int amt;
-    public static int boxWidth = 54;    
+    public static int boxWidth = 54;
     public static int priceHolder = 0;
     public static int menu;
     public static int intYouNeed = 0;
@@ -76,7 +76,7 @@ class ProjectK {
                 }
                 catch(IOException e2){}
                 if (phoneNumber.length() == 10 || phoneNumber.length() == 10)  {
-                    
+
                     for (int i = 0; i<phoneNumber.length() ;i++ ) {
                         a = phoneNumber.charAt(i);
                         if (Character.isDigit(a) == false) {
@@ -107,7 +107,7 @@ class ProjectK {
         printCentered("");
         printCentered("Instructions");
         stop(1);
-        printCentered("");             
+        printCentered("");
         printCentered("Press 1 check Samsung phones");
         stop(1);
         printCentered("Press 2 check Apple phones");
@@ -142,12 +142,12 @@ class ProjectK {
         BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 
         while (!exit) {
-            System.out.print(text + " (y/n):");
+            System.out.print(text + " (Y/n): ");
             try{
                 choose = sc.readLine();
             }
             catch(IOException e) {}
-            if (choose.equalsIgnoreCase("y") || choose.equalsIgnoreCase("n")) {
+            if (choose.equalsIgnoreCase("") || choose.equalsIgnoreCase("y") || choose.equalsIgnoreCase("n")) {
                 if (choose.equalsIgnoreCase("y")) {
                     isYes = true;
                 }else if (choose.equalsIgnoreCase("n")){
@@ -178,7 +178,7 @@ class ProjectK {
                 char x = numS.charAt(i);
                 if (Character.isDigit(x) == false) {
                     System.out.println("Wrong Choice!");
-                    break;    
+                    break;
                 }else {
                     isNumber = true;
                     exit = true;
@@ -196,7 +196,7 @@ class ProjectK {
         }else{
             start();
         }
-    } 
+    }
 
     public static void start (){
 
@@ -253,7 +253,7 @@ class ProjectK {
                     }else if (menu == 5) {
                         cart();
                     }else if (menu == 6) {
-                        exitCheck();        
+                        exitCheck();
                     }
 
                 } else {
@@ -288,7 +288,7 @@ class ProjectK {
                 itemQuantityAdder(mycart);
             }
         }
-    }   
+    }
 
     public static void itemQuantityAdder (Cart item) {
         boolean exit = false;
@@ -299,7 +299,7 @@ class ProjectK {
             integerCheck("You have selected : " + Name + "\nPlease enter quantity or enter 999 to exit");
             if (isNumber) {
                 if (intYouNeed == 999) {
-                    home();   
+                    home();
                 }else{
                     while(!exit2) {
                         if (intYouNeed > 0 && intYouNeed <=10) {
@@ -399,7 +399,7 @@ class ProjectK {
             //         exit = true;
             //     }else{
             //         System.out.println("Wrong Choice!!");
-            //     }    
+            //     }
             // }else {
             //     System.out.println("There is nothing in your cart :|");
 
@@ -487,7 +487,7 @@ class ProjectK {
 
         }
 
-    } 
+    }
 
     public static void deleteItem () {
         Scanner sc = new Scanner (System.in);
@@ -514,13 +514,13 @@ class ProjectK {
     }
 
     public static void checkOut () {
-        Scanner sc = new Scanner(System.in); 
+        Scanner sc = new Scanner(System.in);
         int numberOfItems = Mycart.size();
         int dayRandomiser = (int)(Math.random() * 10);
         String name = "";
         String address = "";
         int phoneNumber = 0;
-        
+
         clear();
         if (numberOfItems > 0) {
             clear();
