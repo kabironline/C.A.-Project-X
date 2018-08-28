@@ -106,6 +106,7 @@ class Logo {
 			stop(3);
 			 System.out.print(please[i]);
 		 }
+		 System.exit(0);
 	}
 	public static void clear(){
 	//Clears Screen in java
@@ -204,7 +205,7 @@ class Logo {
 		System.out.println(line4b);
 		System.out.println(line5b);
 		System.out.println(line6N);
-		System.out.println(line7N); 
+		System.out.println(line7N);
 		stop(drawTimer);
 		clear();
 		vAlign();
@@ -247,8 +248,8 @@ class Logo {
 		System.out.println(line6b);
 		System.out.println(line7b);
 		System.out.println(line8b);
-		System.out.println(line9b); 
-		visitAgainPrint();       
+		System.out.println(line9b);
+		visitAgainPrint();
 	}
 
 }
