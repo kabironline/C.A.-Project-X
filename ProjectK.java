@@ -95,6 +95,8 @@ class ProjectK {
             yesNo("Are the above given details correct");
             if (isYes) {
                 exit2 = true;
+            }else {
+                exit = false;
             }
         }
         start();
@@ -137,7 +139,6 @@ class ProjectK {
 
     public static boolean yesNo (String text) {
         boolean exit = false;
-        //Scanner sc = new Scanner (System.in);
         String choose = "";
         BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 
@@ -342,7 +343,6 @@ class ProjectK {
             for (int i = 0;i <= Mycart.size()-1 ;i++ ) {
                 finalPrice += Mycart.get(i).price;
 
-                //System.out.println(Mycart.get(i).name + " The Price is: " + Mycart.get(i).price +" with total RAM of: " + Mycart.get(i).RAM+ "GB is in your cart");
                 String iNum = (int)i+")";
                 String PriceNum = (int)Mycart.get(i).price+"Rs.";
                 String Ram = Mycart.get(i).RAM+"Gb.";
@@ -354,23 +354,21 @@ class ProjectK {
         }
         printAmtBox();
         System.out.println("");
-        System.out.println("Press 1 to delete items from your cart ");
-        System.out.println("Press 2 to clear your cart");
-        System.out.println("Print 3 to check out your cart");
+        System.out.println("Print 1 to check out your cart");
+        System.out.println("Press 2 to delete items from your cart ");
+        System.out.println("Press 3 to clear your cart");
         System.out.println("Press 4 to return back to the menu");
-        //System.out.print("please select your choice: ");
         while (!exit){
             integerCheck("please select your choice: ");
             choose =intYouNeed;
             if (choose== 1 || choose == 2 || choose == 3 || choose == 4) {
                 if (choose == 1) {
-                    deleteMenu();
-                }else if (choose == 2){
-                    clearCart();
-                }else if (choose == 3) {
                     addressCheck();
+                }else if (choose == 2){
+                    deleteMenu();
+                }else if (choose == 3) {
+                    clearCart();
                 }else if (choose == 4) {
-
                     start();
                 }
                 exit = true;
@@ -388,22 +386,6 @@ class ProjectK {
         Scanner sc = new Scanner(System.in);
 
         while (!exit) {
-            //System.out.print("Are You sure you want to clear your cart?(y/n) ");
-            //choose = sc.next();
-            // if (Mycart.size() != 0 ) {
-            //     if (choose.equalsIgnoreCase("y") || choose.equalsIgnoreCase("n")) {
-            //         if (choose.equalsIgnoreCase("y")) {
-            //             Mycart.clear();
-            //         }else if (choose.equalsIgnoreCase("n")){
-            //         }
-            //         exit = true;
-            //     }else{
-            //         System.out.println("Wrong Choice!!");
-            //     }
-            // }else {
-            //     System.out.println("There is nothing in your cart :|");
-
-            // }
             yesNo("Are You sure you want to clear your cart? ");
             if (isYes) {
                 if (Mycart.size() != 0 ){
@@ -469,22 +451,11 @@ class ProjectK {
             System.out.println("Press "+i +" to delete "+Mycart.get(i).name+" from your cart");
             stop(1);
         }
-
-        System.out.print("Do you want to delete items form your cart (y/n): ");
-        while (!exit) {
-            cartChoose = sc.next();
-            if (cartChoose.equalsIgnoreCase("y") || cartChoose.equalsIgnoreCase("n")) {
-                if (cartChoose.equalsIgnoreCase("y")) {
-                    deleteItem();
-                }else if (cartChoose.equalsIgnoreCase("n")){
-                    cart();
-                }
-                exit = true;
-            }else{
-                System.out.println("Wrong Choice!!");
-                System.out.print("Do you want to delete items form your cart (y/n): ");
-            }
-
+        yesNo("Do you want to delete items form your cart");
+        if (isYes) {
+            deleteItem();
+        }else{
+            cart();
         }
 
     }
@@ -499,10 +470,11 @@ class ProjectK {
         integerCheck("Enter the number allocated to the phone you want to delete");
         if (isNumber) {
             while(!exit)
-            if (deleteNum >= 0 && deleteNum < Mycart.size()) {
-                yesNo("Are You sure you want to delete "+Mycart.get(deleteNum).name+" from the cart");
+            if (intYouNeed >= 0 && intYouNeed < Mycart.size()) {
+                yesNo("Are You sure you want to delete "+Mycart.get(intYouNeed).name+" from the cart");
                 if (isYes) {
-                    Mycart.remove(deleteNum);
+                    Mycart.remove(intYouNeed);
+                    cart();
                 }else {
                     cart();
                 }
@@ -517,10 +489,6 @@ class ProjectK {
         Scanner sc = new Scanner(System.in);
         int numberOfItems = Mycart.size();
         int dayRandomiser = (int)(Math.random() * 10);
-        String name = "";
-        String address = "";
-        int phoneNumber = 0;
-
         clear();
         if (numberOfItems > 0) {
             clear();
@@ -536,7 +504,7 @@ class ProjectK {
             System.out.print("* ");
             for (int i = 0; i < Mycart.size() ; i++ ) {
                 System.out.print(Mycart.get(i).name + " * ");
-                if (i % 5 == 0) {
+                if (i % 10 == 0) {
                     System.out.println("");
                 }
             }

@@ -22,7 +22,6 @@ class PhoneList {
 	public void print() {
 			System.out.println("Num.     Name of Product	RAM 	price");
 			Logo.drawLine();
-		//Screen.NextLineCenterer(list.size());
 		for (int i = 0;i < list.size() ;i++ ) {
 			String iNum = (int)i+")";
 			String PriceNum = (int)list.get(i).price+"Rs.";
@@ -32,7 +31,6 @@ class PhoneList {
 			System.out.println(phoneLine);
 			stop();
 		} 
-		// System.out.print("Do you want to add phone to your cart from this lists (y/n): ");
 		main.buyOrNot();
 
 
@@ -46,30 +44,31 @@ class PhoneList {
 	public void addSamToArray() {
 
 		list.clear();
-		list.add (new Phone ("Samsung J1" , 6890, 1.0));
-		list.add (new Phone ("Samsung J2" , 6590, 2.0));
-		list.add (new Phone ("Samsung J3" , 8800, 2.0));
-		list.add (new Phone ("Samsung J5" , 12000, 3.0));
 		list.add (new Phone ("Samsung J7" , 15000, 3.0));
-		list.add (new Phone ("Samsung S6 Edge" , 35000, 3.0));
-		list.add (new Phone ("Samsung S7 Edge" , 39500, 4.0));
-		list.add (new Phone ("Samsung S8+" , 54000, 4.0));
-		list.add (new Phone ("Samsung S9" , 57000, 6.0));
+		list.add (new Phone ("Samsung J5" , 12000, 3.0));
+		list.add (new Phone ("Samsung J3" , 8800, 2.0));
+		list.add (new Phone ("Samsung J2" , 6590, 2.0));
+		list.add (new Phone ("Samsung J1" , 6890, 1.0));
 		list.add (new Phone ("Samsung S9+" , 64500, 6.0));
+		list.add (new Phone ("Samsung S9" , 57000, 6.0));
+		list.add (new Phone ("Samsung S8+" , 62000, 6.0));
+		list.add (new Phone ("Samsung S8" , 50000, 4.0));
+		list.add (new Phone ("Samsung S7 Edge" , 39500, 4.0));
+		list.add (new Phone ("Samsung S6 Edge" , 35000, 3.0));
 		list.add (new Phone ("Samsung On7" , 13990, 4.0));
 
 	}
 	public void addAppleToArray () {
 
 		list.clear();
-		list.add (new Phone ("Apple iPhone SE" , 18990, 1.0));
-		list.add (new Phone ("Apple iPhone 6" , 25699, 1.0));
-		list.add (new Phone ("Apple iPhone 6s" , 37999, 1.0));
-		list.add (new Phone ("Apple iPhone 7" , 45999, 2.0));
-		list.add (new Phone ("Apple iPhone 7+" , 60990, 3.0));
-		list.add (new Phone ("Apple iPhone 8" , 69990, 2.0));
-		list.add (new Phone ("Apple iPhone 8+" , 72999, 1.0));
 		list.add (new Phone ("Apple iPhone X" , 99000, 3.0));
+		list.add (new Phone ("Apple iPhone 8+" , 72999, 1.0));
+		list.add (new Phone ("Apple iPhone 8" , 69990, 2.0));
+		list.add (new Phone ("Apple iPhone 7+" , 60990, 3.0));
+		list.add (new Phone ("Apple iPhone 7" , 45999, 2.0));
+		list.add (new Phone ("Apple iPhone 6s" , 37999, 1.0));
+		list.add (new Phone ("Apple iPhone 6" , 25699, 1.0));
+		list.add (new Phone ("Apple iPhone SE" , 18990, 1.0));
 		list.add (new Phone ("Apple iPadPro 12.9'",69900, 4.0));
 		list.add (new Phone ("Apple iPad 9.7' ",25900, 2.0));
 
@@ -77,12 +76,12 @@ class PhoneList {
 	public void addNokiaToArray() {
 
 		list.clear();
-		list.add (new Phone ("Nokia 2" ,6219 , 1.0));
 		list.add (new Phone ("Nokia 8" , 28699, 4.0));
 		list.add (new Phone ("Nokia 7+" , 25999, 4.0));
 		list.add (new Phone ("Nokia 6" , 12999, 3.0));
 		list.add (new Phone ("Nokia 5" , 11700, 2.0));
 		list.add (new Phone ("Nokia 3" , 8490, 2.0));
+		list.add (new Phone ("Nokia 2" ,6219 , 1.0));
 
 	}
 	public void addHuaToArray() {
