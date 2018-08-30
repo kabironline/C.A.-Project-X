@@ -101,7 +101,6 @@ class ProjectK {
         }
         start();
     }
-
     private static void discription () {
         clear();
         printCentered("Welcome " + name+" to the K. Store");
@@ -110,15 +109,17 @@ class ProjectK {
         printCentered("Instructions");
         stop(1);
         printCentered("");
-        printCentered("Press 1 check Samsung phones");
+        printCentered("Press 1 to check Samsung phones");
         stop(1);
-        printCentered("Press 2 check Apple phones");
+        printCentered("Press 2 to check Apple phones");
         stop(1);
-        printCentered("Press 3 check Nokia phones");
+        printCentered("Press 3 to check Nokia phones");
         stop(1);
-        printCentered("Press 4 check Huawei phones");
+        printCentered("Press 4 to check Huawei phones");
         stop(1);
-        printCentered("Press 5 check your shoping cart *"+Mycart.size()+" item(s)*");
+        printCentered("Press 5 to check Phone Accessoires");
+        stop(1);
+        printCentered("Press 5 to check your shoping cart *"+Mycart.size()+" item(s)*");
         stop(1);
         printCentered("Press 6 to exit the store");
         stop(1);
@@ -193,7 +194,7 @@ class ProjectK {
     public static void buyOrNot (){
         yesNo("Do you want to add phone to your cart from this lists ");
         if (isYes) {
-            cartSel();
+            Cart.cartSel();
         }else{
             start();
         }
@@ -252,7 +253,7 @@ class ProjectK {
                         list.addHuaToArray();
                         list.print();
                     }else if (menu == 5) {
-                        cart();
+                        Cart.cart();
                     }else if (menu == 6) {
                         exitCheck();
                     }
@@ -267,261 +268,13 @@ class ProjectK {
         }
     }
 
-    public static void cartSel() {
-
-        addItemsToCart();
-
-    }
-
-    public static void addItemsToCart (){
-        PhoneList list = new PhoneList();
-        boolean exit = false;
-        while(!exit){
-            integerCheck("Enter the number allocated to the mobile you want to buy or enter 999 to cancel the placement of order");
-            if (intYouNeed == 999) {
-                home();
-            }else if ((intYouNeed >= 0) && (intYouNeed < PhoneList.list.size()) ){
-                String Name = list.get(intYouNeed).name;
-                int Price = list.get(intYouNeed).price;
-                double RAM = list.get(intYouNeed).RAM;
-                Cart mycart = new Cart(Name,Price,RAM);
-                cartItem = mycart;
-                itemQuantityAdder(mycart);
-            }
-        }
-    }
-
-    public static void itemQuantityAdder (Cart item) {
-        boolean exit = false;
-        boolean exit2 = false;
-        PhoneList list = new PhoneList();
-        String Name = item.name;
-        while (!exit) {
-            integerCheck("You have selected : " + Name + "\nPlease enter quantity or enter 999 to exit");
-            if (isNumber) {
-                if (intYouNeed == 999) {
-                    home();
-                }else{
-                    while(!exit2) {
-                        if (intYouNeed > 0 && intYouNeed <=10) {
-                            for (int i = 1; i <= intYouNeed  ;i++ ) {
-                                Mycart.add(item);
-                            }
-                            home();
-                        }else{
-                            System.out.println("Wrong Choice!!");
-                            integerCheck("You have selected : " + Name + "\nPlease enter quantity or enter 999 to exit");
-                        }
-                    }
-                }
-            }else {
-                System.out.println("Wrong Choice!!");
-            }
-        }
-    }
-
     public static void stop(int timer) {
         int i = 0;
         while (i <= 100000000 * timer) {
             i++;
         }
     }
-
-    public static void cart(){
-        finalPrice = 0;
-        clear();
-        boolean exit = false;
-        int choose = 0;
-        Scanner sc = new Scanner (System.in);
-        if (Mycart.size() == 0) {
-            System.out.println("There is nothing in your cart!?!?");
-
-        }else {
-            System.out.println(Mycart.size() + " item(s) are in your cart.");
-            System.out.println("Num.     Name of Product    RAM     price");
-            Logo.drawLine();
-            for (int i = 0;i <= Mycart.size()-1 ;i++ ) {
-                finalPrice += Mycart.get(i).price;
-
-                String iNum = (int)i+")";
-                String PriceNum = (int)Mycart.get(i).price+"Rs.";
-                String Ram = Mycart.get(i).RAM+"Gb.";
-                String nameS = Mycart.get(i).name;
-                String phoneLine = String.format("%-8s %-22s %-7s %s",iNum,nameS,Ram,PriceNum);
-                System.out.println(phoneLine);
-                stop(1);
-            }
-        }
-        printAmtBox();
-        System.out.println("");
-        System.out.println("Print 1 to check out your cart");
-        System.out.println("Press 2 to delete items from your cart ");
-        System.out.println("Press 3 to clear your cart");
-        System.out.println("Press 4 to return back to the menu");
-        while (!exit){
-            integerCheck("please select your choice: ");
-            choose =intYouNeed;
-            if (choose== 1 || choose == 2 || choose == 3 || choose == 4) {
-                if (choose == 1) {
-                    addressCheck();
-                }else if (choose == 2){
-                    deleteMenu();
-                }else if (choose == 3) {
-                    clearCart();
-                }else if (choose == 4) {
-                    start();
-                }
-                exit = true;
-            }else{
-                System.out.println("Wrong Choice!!");
-                System.out.print("Please choose an option form the list : ");
-            }
-        }
-    }
-
-    public static void clearCart () {
-
-        boolean exit = false;
-        String choose;
-        Scanner sc = new Scanner(System.in);
-
-        while (!exit) {
-            yesNo("Are You sure you want to clear your cart? ");
-            if (isYes) {
-                if (Mycart.size() != 0 ){
-                    Mycart.clear();
-                }else {
-                    cart();
-                }
-            }
-            cart();
-
-        }
-
-    }
-
-    public static void printAmtBox () {
-        priceHolder = 0;
-        boxWidth = 54;
-        System.out.println("");
-        for (int i = 0;i < Mycart.size() ;i++ ) {
-            priceHolder += Mycart.get(i).price;
-        }
-        while (priceHolder > 0) {
-            priceHolder = priceHolder / 10;
-            boxWidth += 1;
-        }
-        String c1 = "\u2554";
-        String c2 = "\u255A";
-        String c3 = "\u255D";
-        String c4 = "\u2557";
-        String hLine = "\u2551";
-        String line = "\u2550";
-        if (boxWidth > 54) {
-            boxWidth -= 1;
-        }
-        System.out.print("                  "+c1);
-        for (int i = 0;i <= boxWidth ; i++ ) {
-            System.out.print(line);
-        }
-        System.out.println(c4);
-        System.out.println("                  "+hLine+ " " + finalPrice +" Rs. is the final amount you have to pay on delivery "+ hLine);
-        System.out.print("                  "+c2);
-        for (int i = 0;i <= boxWidth ; i++ ) {
-            System.out.print(line);
-        }
-        System.out.println(c3);
-        amt = priceHolder;
-    }
-
-    public static void deleteMenu () {
-        clear();
-        if (Mycart.size() == 0) {
-            System.out.println("You have nothing in your cart!");
-            stop(9);
-            stop(9);
-            stop(9);
-            cart();
-        }
-        Scanner sc = new Scanner (System.in);
-        int deleteNum = 0;
-        String cartChoose = "";
-        boolean exit = false;
-        for (int i = 0;i <= Mycart.size()-1 ;i++ ) {
-            System.out.println("Press "+i +" to delete "+Mycart.get(i).name+" from your cart");
-            stop(1);
-        }
-        yesNo("Do you want to delete items form your cart");
-        if (isYes) {
-            deleteItem();
-        }else{
-            cart();
-        }
-
-    }
-
-    public static void deleteItem () {
-        Scanner sc = new Scanner (System.in);
-        int deleteNum = 0;
-        String cartChoose = "";
-        boolean exit = false;
-        boolean exit2 = false;
-        boolean exit3 = false;
-        integerCheck("Enter the number allocated to the phone you want to delete");
-        if (isNumber) {
-            while(!exit)
-            if (intYouNeed >= 0 && intYouNeed < Mycart.size()) {
-                yesNo("Are You sure you want to delete "+Mycart.get(intYouNeed).name+" from the cart");
-                if (isYes) {
-                    Mycart.remove(intYouNeed);
-                    cart();
-                }else {
-                    cart();
-                }
-                exit = true;
-            }else {
-                System.out.println("Wrong Choice!!");
-            }
-        }
-    }
-
-    public static void checkOut () {
-        Scanner sc = new Scanner(System.in);
-        int numberOfItems = Mycart.size();
-        int dayRandomiser = (int)(Math.random() * 10);
-        clear();
-        if (numberOfItems > 0) {
-            clear();
-            System.out.println("Your items will arrive at : "+  address);
-            if (dayRandomiser < 3) {
-                System.out.println("                        Your items will arrive in 1-3 buisness days");
-            }else if (dayRandomiser > 2 && dayRandomiser < 7) {
-                System.out.println("                        Your items will arrive in 3-6 duisness days");
-            }else if (dayRandomiser > 6) {
-                System.out.println("                        Your items will arrive in 6-10 buisness days");
-            }
-            System.out.println("                            ");
-            System.out.print("* ");
-            for (int i = 0; i < Mycart.size() ; i++ ) {
-                System.out.print(Mycart.get(i).name + " * ");
-                if (i % 10 == 0) {
-                    System.out.println("");
-                }
-            }
-            boxWidth +=1;
-            printAmtBox();
-
-        }else {
-            System.out.println("                            You have nothing in your cart!");
-
-        }
-        yesNo("Please confirm the items you have added to your cart");
-        if(isYes){
-            exit();
-        }
-
-    }
-    public static void addressCheck(){
+       public static void addressCheck(){
         Logo.clear();
         Logo.vAlign();
         printCentered2("The order is placed by : " + name + " " + surname + "\nThe order will arrive at " + address + "\nThe Phone Number of the recipient is : " + phoneNumber + "\nAre the above given details correct ");
@@ -529,7 +282,7 @@ class ProjectK {
         if(!isYes){
             takeCredentials();
         }else{
-            checkOut();
+            Cart.checkOut();
         }
 
 
@@ -540,7 +293,7 @@ class ProjectK {
             if(Mycart.size() != 0){
                 yesNo("You have items in your cart? Do You wish to buy them?");
                 if (isYes) {
-                    cart();
+                    Cart.cart();
                 }else{
                     exit();
                 }
