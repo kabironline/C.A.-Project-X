@@ -20,8 +20,6 @@ class ProjectK {
 	public static String surname = "";
 	public static String address;
 	public static String phoneNumber;
-	public static ArrayList<Cart> Mycart = new ArrayList<Cart>();
-	public static Cart cartItem = new Cart("",0,0.0);
 
 		//The Main Function
 	public static void main(String[] args) {
@@ -31,7 +29,7 @@ class ProjectK {
 
 	public static void login (){
 		takeCredentials();
-		 start();
+		start();
 	}
 	public static void takeCredentials (){
 		BufferedReader sc2;
@@ -121,7 +119,7 @@ class ProjectK {
 		stop(1);
 		printCentered("Press 5 to check Phone Accessoires");
 		stop(1);
-		printCentered("Press 6 to check your shoping cart *"+Mycart.size()+" item(s)*");
+		printCentered("Press 6 to check your shoping cart *"+Cart.Mycart.size()+" item(s)*");
 		stop(1);
 		printCentered("Press 7 to exit the store");
 		stop(1);
@@ -194,9 +192,17 @@ class ProjectK {
 	}
 
 	public static void buyOrNot (){
-		yesNo("Do you want to add phone to your cart from this lists ");
+		yesNo("Do you want to add a phone to your cart from this lists ");
 		if (isYes) {
 			Cart.cartSel();
+		}else{
+			start();
+		}
+	}
+	public static void buyOrNotAccessories() {
+		yesNo("Do you want to add an accessorie to your cart form the this list");
+		if(isYes){
+
 		}else{
 			start();
 		}
@@ -227,7 +233,6 @@ class ProjectK {
 
 		Logo log = new Logo();
 		PhoneList list = new PhoneList();
-		Cart cart = new Cart("", 0,0.0);
 		Scanner sc = new Scanner (System.in);
 		boolean exit = false;
 		while(!exit) {
@@ -255,7 +260,7 @@ class ProjectK {
 						list.addHuaToArray();
 						list.print();
 					}else if (menu == 5) {
-
+						accessoriesMenu();
 					}else if (menu == 6) {
 						Cart.cart();
 		
@@ -278,24 +283,37 @@ class ProjectK {
 		clear();
 		boolean exit = false;
 		printCentered("Press 1 to check HeadPhones");
+		stop(1);
 		printCentered("Press 2 to check EarPhones");
+		stop(1);
 		printCentered("Press 3 to check Storage Cards");
+		stop(1);
 		printCentered("Press 4 to check Power Banks");
+		stop(1);
 		printCentered("Press 5 to return back to main menu ");
+		stop(1);
 		while(!exit){
-			integerCheck("Please select an option from the list given above");	
+			integerCheck("Please select an option from the list given above");
 			if(isNumber){
-				intYouNeed = accessoriesmenu;
+				accessoriesmenu = intYouNeed;
 				if(accessoriesmenu >= 1 && accessoriesmenu <=5 ){
 					exit = true;
 					if (accessoriesmenu == 1) {
+						clear();
 						accessoriesList.addHeadPhone();
+						accessoriesList.print();
 					}if (accessoriesmenu == 2) {
+						clear();
 						accessoriesList.addEarPhone();
+						accessoriesList.print();
 					}if (accessoriesmenu == 3) {
+						clear();
 						accessoriesList.addSDCard();
+						accessoriesList.print();
 					}if (accessoriesmenu == 4) {
+						clear();
 						accessoriesList.addPowerBank();
+						accessoriesList.print();
 					}if (accessoriesmenu == 5) {
 						menu();
 					}
@@ -325,7 +343,7 @@ class ProjectK {
 	public static void exitCheck () {
 		yesNo("Are you sure you want to exit the store?");
 		if (isYes) {
-			if(Mycart.size() != 0){
+			if(Cart.Mycart.size() != 0){
 				yesNo("You have items in your cart? Do You wish to buy them?");
 				if (isYes) {
 					Cart.cart();

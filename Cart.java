@@ -8,16 +8,20 @@ class Cart {
     public static int priceHolder = 0;
     public static int menu;
     public static ArrayList<Cart> Mycart = new ArrayList<Cart>();
-    public static Cart cartItem = new Cart("",0,0.0);
-	ArrayList<Cart> MyCart = new ArrayList<Cart>();
+    public static Cart cartItem = new Cart("",0,0.0,0,0,0);
+    ArrayList<Cart> MyCart = new ArrayList<Cart>();
 	public String name = "";  
 	public int price = 0;
-	public double RAM = 0;
+    public double RAM = 0;
+    public int storage=0;
+    public int powerStorage = 0;
 
-	public Cart (String Name, int Price, double Ram){
+	public Cart (String Name, int Price, double Ram, int storage,int powerStorage,int Storage){
 		this.name  = Name;
 		this.price = Price;
-		this.RAM   = Ram;
+        this.RAM   = Ram;
+        this.powerStorage =powerStorage;
+        this.storage = storage;
 	}
 	public static void cart(){
         finalPrice = 0;
@@ -30,16 +34,18 @@ class Cart {
 
         }else {
             System.out.println(Mycart.size() + " item(s) are in your cart.");
-            System.out.println("Num.     Name of Product        RAM     price");
+            System.out.println("Num.     Name of Product	Price    Storage    Capacity RAM");
             Logo.drawLine();
             for (int i = 0;i <= Mycart.size()-1 ;i++ ) {
                 finalPrice += Mycart.get(i).price;
 
                 String iNum = (int)i+")";
                 String PriceNum = (int)Mycart.get(i).price+"Rs.";
-                String Ram = Mycart.get(i).RAM+"Gb.";
+                String Ram = Mycart.get(i).RAM+"GB.";
                 String nameS = Mycart.get(i).name;
-                String phoneLine = String.format("%-8s %-22s %-7s %s",iNum,nameS,Ram,PriceNum);
+               	String PowerStorage = Mycart.get(i).powerStorage+"mAh";
+               	String Storage = Mycart.get(i).storage+"GB.";
+                String phoneLine = String.format("%-8s %-22s %-5s %-9s %-8s",iNum,nameS,PriceNum,Storage,PowerStorage,Ram);
                 System.out.println(phoneLine);
                 stop(1);
             }
@@ -48,7 +54,7 @@ class Cart {
         System.out.println("");
         System.out.println("Print 1 to check out your cart");
         System.out.println("Press 2 to delete items from your cart ");
-        System.out.println("Press 3 to ProjectK.clear your cart");
+        System.out.println("Press 3 to clear your cart");
         System.out.println("Press 4 to return back to the menu");
         while (!exit){
             ProjectK.integerCheck("please select your choice: ");
@@ -81,7 +87,9 @@ class Cart {
                 String Name = list.get(ProjectK.intYouNeed).name;
                 int Price = list.get(ProjectK.intYouNeed).price;
                 double RAM = list.get(ProjectK.intYouNeed).RAM;
-                Cart mycart = new Cart(Name,Price,RAM);
+                int Storage = list.get(ProjectK.intYouNeed).storage;
+                int PowerStorage = list.get(ProjectK.intYouNeed).powerStorage;
+                Cart mycart = new Cart(Name,Price,RAM,Storage,PowerStorage,0);
                 cartItem = mycart;
                 itemQuantityAdder(mycart);
             }
