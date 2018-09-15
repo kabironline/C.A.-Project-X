@@ -34,7 +34,7 @@ class Cart {
 
         }else {
             System.out.println(Mycart.size() + " item(s) are in your cart.");
-            System.out.println("Num.     Name of Product	Price    Storage    Capacity RAM");
+            System.out.println("Num.     Name of Product	Price	  Power	    RAM");
             Logo.drawLine();
             for (int i = 0;i <= Mycart.size()-1 ;i++ ) {
                 finalPrice += Mycart.get(i).price;
@@ -45,7 +45,7 @@ class Cart {
                 String nameS = Mycart.get(i).name;
                	String PowerStorage = Mycart.get(i).powerStorage+"mAh";
                	String Storage = Mycart.get(i).storage+"GB.";
-                String phoneLine = String.format("%-8s %-22s %-5s %-9s %-8s",iNum,nameS,PriceNum,Storage,PowerStorage,Ram);
+                String phoneLine = String.format("%-8s %-22s %-9s %-9s %s",iNum,nameS,PriceNum,PowerStorage,Ram);
                 System.out.println(phoneLine);
                 stop(1);
             }

@@ -20,7 +20,7 @@ class PhoneList {
 
 	// this Function reads Objects from the ArrayList
 	public void print() {
-			System.out.println("Num.     Name of Product	RAM 	price");
+			System.out.println("Num.     Name of Product	Price	  Power	    RAM");
 			Logo.drawLine();
 		for (int i = 0;i < list.size() ;i++ ) {
 			String iNum = (int)i+")";
@@ -29,7 +29,7 @@ class PhoneList {
 			String nameS = list.get(i).name;
            	String PowerStorage = list.get(i).powerStorage+"mAh";
            	String Storage = list.get(i).storage+"GB.";
-            String phoneLine = String.format("%-8s %-22s %-6s %-8s %-10s",iNum,nameS,Storage,PowerStorage,PriceNum);
+           String phoneLine = String.format("%-8s %-22s %-9s %-9s %s",iNum,nameS,PriceNum,PowerStorage,Ram);
 			System.out.println(phoneLine);
 			stop();
 		} 
