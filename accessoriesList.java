@@ -3,9 +3,9 @@ public class accessoriesList {
 	public static ArrayList<item> list = new ArrayList<item>();
 	public accessoriesList() {
 		if(ProjectK.accessoriesmenu == 1 ){
-			addEarPhone();
-		}if(ProjectK.accessoriesmenu == 2 ){
 			addHeadPhone();
+		}if(ProjectK.accessoriesmenu == 2 ){
+			addEarPhone();
 		}if(ProjectK.accessoriesmenu == 3 ){
 			addSDCard();
 		}if(ProjectK.accessoriesmenu == 4 ){
@@ -25,9 +25,10 @@ public class accessoriesList {
 		if (ProjectK.accessoriesmenu == 4) {
 			printPowerBanks();
 		}
+		ProjectK.buyOrNotAccessories();
 	}
 	public static void printStorageDrive () {
-		System.out.println("Num.     Name of Product	Storage	Price");
+		System.out.println("Num.     Name of Product	Storage      Price");
 		Logo.drawLine();
 		for (int i = 0;i < list.size() ;i++ ) {
 				String iNum = (int)i+")";
@@ -40,21 +41,21 @@ public class accessoriesList {
 		}
 	}
 	public static void printPowerBanks () {
-		System.out.println("Num.     Name of Product	Capacity	Price");
+		System.out.println("Num.     Name of Product	  Capacity	Price");
 		Logo.drawLine();
 		for (int i = 0;i < list.size() ;i++ ) {
 				String iNum = (int)i+")";
 				String PriceNum = (int)list.get(i).price+"Rs.";
 				String nameS = list.get(i).name;
 				String PowerStorage = (int)list.get(i).powerStorage + "mAh";
-				String phoneLine = String.format("%-8s %-22s %-14s %5s",iNum,nameS,PowerStorage,PriceNum);
+				String phoneLine = String.format("%-8s %-22s %-15s %5s",iNum,nameS,PowerStorage,PriceNum);
 				System.out.println(phoneLine);
 				ProjectK.stop(1);
 		}
 	}
 
 	public static void printHeadPhones (){
-				System.out.println("Num.     Name of Product	price");
+		System.out.println("Num.     Name of Product	price");
 		Logo.drawLine();
 		for (int i = 0;i < list.size() ;i++ ) {
 				String iNum = (int)i+")";
@@ -92,14 +93,14 @@ public class accessoriesList {
 	}
 	public static void addSDCard () {
 		list.clear();
-		list.add(new item("Samsung Evo Class 10 ",3200 ,128 ,0,0));
-		list.add(new item("Samsung Evo Class 10 ",1295 ,64 ,0,0));
-		list.add(new item("Samsung Evo Class 10 ",900 ,32 ,0,0));
-		list.add(new item("SanDisk Class 10", 7890,256 ,0,0));
-		list.add(new item("SanDisk Class 10", 2500,128 ,0,0));
-		list.add(new item("SanDisk Class 10", 1250,64 ,0,0));
-		list.add(new item("SanDisk Class 10", 750,32 ,0,0));
-		list.add(new item("SanDisk Class 10", 420,16 ,0,0));
+		list.add(new item("Samsung Evo Class 10 ",3200 ,0,0,128));
+		list.add(new item("Samsung Evo Class 10 ",1295 ,0,0,64));
+		list.add(new item("Samsung Evo Class 10 ",900 ,0,0,32));
+		list.add(new item("SanDisk Class 10", 7890,0,0,512));
+		list.add(new item("SanDisk Class 10", 2500,0,0,128));
+		list.add(new item("SanDisk Class 10", 1250,0,0,64));
+		list.add(new item("SanDisk Class 10", 750,0,0,32));
+		list.add(new item("SanDisk Class 10", 420,0,0,16));
 	}
 	public static void addPowerBank() {
 		list.clear();

@@ -202,7 +202,7 @@ class ProjectK {
 	public static void buyOrNotAccessories() {
 		yesNo("Do you want to add an accessorie to your cart form the this list");
 		if(isYes){
-
+			Cart.cartSelacc();
 		}else{
 			start();
 		}
@@ -315,7 +315,7 @@ class ProjectK {
 						accessoriesList.addPowerBank();
 						accessoriesList.print();
 					}if (accessoriesmenu == 5) {
-						menu();
+						start();
 					}
 				}
 			}
