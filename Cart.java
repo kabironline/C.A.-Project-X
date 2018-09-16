@@ -8,7 +8,7 @@ class Cart {
 	public static int priceHolder = 0;
 	public static int menu;
 	public static ArrayList<Cart> Mycart = new ArrayList<Cart>();
-	public static Cart cartItem = new Cart("",0,0.0,0,0,0);
+	public static Cart cartItem = new Cart("",0,0.0,0,0);
 	ArrayList<Cart> MyCart = new ArrayList<Cart>();
 	public String name = "";  
 	public int price = 0;
@@ -16,7 +16,7 @@ class Cart {
 	public int storage=0;
 	public int powerStorage = 0;
 
-	public Cart (String Name, int Price, double Ram, int storage,int powerStorage,int Storage){
+	public Cart (String Name, int Price, double Ram,int powerStorage,int Storage){
 		this.name  = Name;
 		this.price = Price;
 		this.RAM   = Ram;
@@ -98,7 +98,7 @@ class Cart {
 				double RAM = list.get(ProjectK.intYouNeed).RAM;
 				int Storage = list.get(ProjectK.intYouNeed).storage;
 				int PowerStorage = list.get(ProjectK.intYouNeed).powerStorage;
-				Cart mycart = new Cart(Name,Price,RAM,Storage,PowerStorage,0);
+				Cart mycart = new Cart(Name,Price,RAM,Storage,PowerStorage);
 				cartItem = mycart;
 				itemQuantityAdder(mycart);
 			}

@@ -78,28 +78,28 @@ class PhoneList {
 	public void addNokiaToArray() {
 
 		list.clear();
-		// list.add (new item ("Nokia 8" , 28699, 4.0));
-		// list.add (new item ("Nokia 7+" , 25999, 4.0));
-		// list.add (new item ("Nokia 6" , 12999, 3.0));
-		// list.add (new item ("Nokia 5" , 11700, 2.0));
-		// list.add (new item ("Nokia 3" , 8490, 2.0));
-		// list.add (new item ("Nokia 2" ,6219 , 1.0));
+		list.add (new item ("Nokia 8" , 28699, 4.0, 3090 , 64));
+		list.add (new item ("Nokia 7+" , 25999, 4.0, 3800 , 64));
+		list.add (new item ("Nokia 6" , 12999, 3.0, 3000 , 32));
+		list.add (new item ("Nokia 5" , 11700, 2.0, 3000 , 16));
+		list.add (new item ("Nokia 3" , 8490, 2.0, 3000 , 16));
+		list.add (new item ("Nokia 2" ,6219 , 1.0, 4100 , 8));
 
 	}
 	public void addHuaToArray() {
 		
 		list.clear ();
-		// list.add (new item ("Huawei P20 Pro" , 64999, 6.0));
-		// list.add (new item ("Huawei P20" , 60999, 4.0));
-		// list.add (new item ("Huawei Mate 8" , 39999, 3.0));
-		// list.add (new item ("Huawei Nexus 6P" ,36999 , 3.0));
-		// list.add (new item ("Huawei View 10" , 29999, 6.0));
-		// list.add (new item ("Huawei Honor 8 Pro" , 22999, 6.0));
-		// list.add (new item ("Huawei Honor 7x" , 15999, 4.0));
-		// list.add (new item ("Huawei Honor 9 Lite" , 13999, 3.0));
-		// list.add (new item ("Huawei Mate 9" , 12999, 4.0));
-		// list.add (new item ("Huawei Honor 8 Smart" , 12999, 4.0));
-		// list.add (new item ("Huawei Honor 8" , 8490, 4.0));
+		list.add (new item ("Huawei P20 Pro" , 64999, 6.0,4000 , 128));
+		list.add (new item ("Huawei P20" , 60999, 4.0,3400 ,128 ));
+		list.add (new item ("Huawei Mate 8" , 39999, 4.0, 3000, 128));
+		list.add (new item ("Huawei Nexus 6P" ,36999 , 3.0, 3450 , 64));
+		list.add (new item ("Huawei View 10" , 29999, 6.0, 3500,128 ));
+		list.add (new item ("Huawei Honor 8 Pro" , 22999, 6.0, 4000,128 ));
+		list.add (new item ("Huawei Honor 8" , 18000, 4.0, 32, 3000));
+		list.add (new item ("Huawei Honor 7x" , 15999, 4.0,3340 , 64));
+		list.add (new item ("Huawei Honor 9 Lite" , 13999, 3.0,3030 ,3 ));
+		list.add (new item ("Huawei Mate 9" , 12999, 4.0,4000 , 64));
+		list.add (new item ("Huawei Honor 8 Smart" , 12999, 2.0, 3000, 16));
 
 	}
 		public static void stop() {
